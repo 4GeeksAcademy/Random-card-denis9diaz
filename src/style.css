@@ -1,1 +1,105 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background: green;
+}
+.card {
+  background: white;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  height: 600px;
+  width: 400px;
+  padding: 20px;
+  padding-top: 200px;
+  border-radius: 15px;
+  font-size: 120px;
+}
+.simbolo-arriba {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 100px;
+}
+.simbolo-abajo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 100px;
+}
+
+.numero {
+  color: black !important;
+}
+
+.heart::before {
+  content: "♥";
+  color: red;
+  position: absolute;
+  font-size: 100px;
+  top: 20px;
+  left: 20px;
+}
+.heart::after {
+  content: "♥";
+  color: red;
+  position: absolute;
+  font-size: 100px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.diamond::before {
+  content: "♦";
+  color: red;
+  position: absolute;
+  font-size: 100px;
+  top: 20px;
+  left: 20px;
+}
+.diamond::after {
+  content: "♦";
+  color: red;
+  position: absolute;
+  font-size: 100px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.club::before {
+  content: "♣";
+  color: black;
+  position: absolute;
+  font-size: 100px;
+  top: 20px;
+  left: 20px;
+}
+.club::after {
+  content: "♣";
+  color: black;
+  position: absolute;
+  font-size: 100px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.spade::before {
+  content: "♠";
+  color: black;
+  position: absolute;
+  font-size: 100px;
+  top: 20px;
+  left: 20px;
+}
+.spade::after {
+  content: "♠";
+  color: black;
+  position: absolute;
+  font-size: 100px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
