@@ -47,6 +47,7 @@ body {
   font-size: 100px;
   bottom: 20px;
   right: 20px;
+  transform: rotate(180deg);
 }
 
 .diamond::before {
@@ -81,6 +82,7 @@ body {
   font-size: 100px;
   bottom: 20px;
   right: 20px;
+  transform: rotate(180deg);
 }
 
 .spade::before {
@@ -98,6 +100,7 @@ body {
   font-size: 100px;
   bottom: 20px;
   right: 20px;
+  transform: rotate(180deg);
 }
 
 .title {
