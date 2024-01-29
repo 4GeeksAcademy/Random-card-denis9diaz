@@ -15,20 +15,20 @@ body {
   border-radius: 15px;
   font-size: 120px;
 }
-.simbolo-arriba {
+.top-suit {
   position: absolute;
   top: 20px;
   left: 20px;
   font-size: 100px;
 }
-.simbolo-abajo {
+.bottom-suit {
   position: absolute;
   bottom: 20px;
   right: 20px;
   font-size: 100px;
 }
 
-.numero {
+.number {
   color: black !important;
 }
 
@@ -105,4 +105,5 @@ body {
 
 .title {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }

@@ -2,8 +2,8 @@ import "bootstrap";
 import "./style.css";
 
 window.onload = () => {
-  document.querySelector(".card").classList.add(generateRandomSimbolo());
-  document.querySelector(".card").innerHTML = generateRandomNumero();
+  document.querySelector(".card").classList.add(generateRandomSuit());
+  document.querySelector(".card").innerHTML = generateRandomNumber();
 };
 
 window.onload = () => {
@@ -20,18 +20,18 @@ let generateNewCard = () => {
   cardElement.className = "card";
   cardElement.innerHTML = "card";
 
-  cardElement.classList.add(generateRandomSimbolo());
-  cardElement.innerHTML = generateRandomNumero();
+  cardElement.classList.add(generateRandomSuit());
+  cardElement.innerHTML = generateRandomNumber();
 };
 
-let generateRandomSimbolo = () => {
-  let simbolos = ["heart", "diamond", "club", "spade"];
-  let indexSimbolos = Math.floor(Math.random() * simbolos.length);
-  return simbolos[indexSimbolos];
+let generateRandomSuit = () => {
+  let suits = ["heart", "diamond", "club", "spade"];
+  let indexSuits = Math.floor(Math.random() * suits.length);
+  return suits[indexSuits];
 };
 
-let generateRandomNumero = () => {
-  let numeros = [
+let generateRandomNumber = () => {
+  let numbers = [
     "A",
     "2",
     "3",
@@ -46,6 +46,6 @@ let generateRandomNumero = () => {
     "Q",
     "K"
   ];
-  let indexNumeros = Math.floor(Math.random() * numeros.length);
-  return numeros[indexNumeros];
+  let indexNumbers = Math.floor(Math.random() * numbers.length);
+  return numbers[indexNumbers];
 };
