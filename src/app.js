@@ -4,13 +4,13 @@ import "./style.css";
 window.onload = () => {
   generateNewCard();
 
-  let timerValue = 2;
+  let timerValue = 5;
   updateTimer();
 
   let timerInterval = setInterval(() => {
-    if (timerValue <= 0) {
+    if (timerValue <= 1) {
       generateNewCard();
-      timerValue = 2;
+      timerValue = 5;
     } else {
       timerValue--;
     }
@@ -19,7 +19,7 @@ window.onload = () => {
 
   document.getElementById("generateNewCard").addEventListener("click", () => {
     generateNewCard();
-    timerValue = 2;
+    timerValue = 5;
     updateTimer();
   });
 
