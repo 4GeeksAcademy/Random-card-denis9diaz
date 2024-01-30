@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Generate random card</title>
+    <title>♦ Generate random card ♦</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -14,14 +14,23 @@
   </head>
   <body>
     <div class="container-fluid text-center">
-      <h1 class="title mt-5">Cartas aleatorias</h1>
-      <div class="card">
+      <h1 class="title mt-5">Random cards</h1>
+      <div class="inputs container-fluid text-center mb-3 mt-3">
+        <label for="cardHeight">Card Height:</label>
+        <input type="number" id="cardHeight" value="600" />
+        <label for="cardWidth">Card Width:</label>
+        <input type="number" id="cardWidth" value="400" />
+      </div>
+      <div class="card" id="customCard">
         <div class="top-suit">♦</div>
         <div class="number">A</div>
         <div class="bottom-suit">♦</div>
       </div>
-      <div class="button container-fluid text-center mt-5">
-        <button id="generateNewCard">New card</button>
+      <div id="timer">Next card in: <span id="timerValue">2</span></div>
+      <div class="button container-fluid text-center mt-3">
+        <button type="button" class="btn btn-light" id="generateNewCard">
+          New card
+        </button>
       </div>
     </div>
   </body>

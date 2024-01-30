@@ -2,23 +2,42 @@ import "bootstrap";
 import "./style.css";
 
 window.onload = () => {
-  document.querySelector(".card").classList.add(generateRandomSuit());
-  document.querySelector(".card").innerHTML = generateRandomNumber();
-};
+  generateNewCard();
 
-window.onload = () => {
-  setInterval(() => {
+  let timerValue = 2;
+  updateTimer();
+
+  let timerInterval = setInterval(() => {
+    if (timerValue <= 0) {
+      generateNewCard();
+      timerValue = 2;
+    } else {
+      timerValue--;
+    }
+    updateTimer();
+  }, 1000);
+
+  document.getElementById("generateNewCard").addEventListener("click", () => {
     generateNewCard();
-  }, 2000);
+    timerValue = 2;
+    updateTimer();
+  });
 
-  document.getElementById("generateNewCard");
-  document.addEventListener("click", generateNewCard);
+  function updateTimer() {
+    document.getElementById("timerValue").innerText = timerValue;
+  }
 };
 
 let generateNewCard = () => {
-  let cardElement = document.querySelector(".card");
+  let cardElement = document.getElementById("customCard");
   cardElement.className = "card";
   cardElement.innerHTML = "card";
+
+  let cardHeight = document.getElementById("cardHeight").value || 600;
+  let cardWidth = document.getElementById("cardWidth").value || 400;
+
+  cardElement.style.height = cardHeight + "px";
+  cardElement.style.width = cardWidth + "px";
 
   cardElement.classList.add(generateRandomSuit());
   cardElement.innerHTML = generateRandomNumber();
